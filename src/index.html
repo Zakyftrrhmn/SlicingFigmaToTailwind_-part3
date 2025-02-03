@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <link href="./output.css" rel="stylesheet" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Custom Tailwind configuration for Alice font */
+      @layer base {
+        h1,
+        h2,
+        h3 {
+          font-family: "Alice", serif;
+        }
+
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        /* Custom Tailwind animation */
+        .animate-scroll {
+          animation: scroll-left 15s linear infinite;
+        }
+
+        /* Style for separators */
+        .separator {
+          font-size: 1.5rem; /* Ukuran separator */
+          color: #fbbf24; /* Warna kuning */
+          opacity: 0.8; /* Sedikit transparansi */
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#E2E8EA]">
+    <!-- Wrapper -->
+    <div class="px-4 sm:px-6 lg:px-8">
+      <!-- Navbar -->
+      <nav
+        class="max-w-6xl mx-auto justify-between mt-10 items-center bg-black backdrop-blur-lg shadow-lg rounded-full py-3 px-8 flex relative"
+      >
+        <h1 class="font-bold text-white">Zakyftrrhmn_</h1>
+
+        <!-- Hamburger Icon for Mobile -->
+        <div class="lg:hidden">
+          <button id="hamburger" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Links (Hidden on Mobile, visible on larger screens) -->
+        <ul id="menu" class="hidden lg:flex flex-row gap-x-7 text-white">
+          <li>
+            <a href="#home" class="text-medium hover:text-purple-700">Home</a>
+          </li>
+          <li>
+            <a href="#aboutMe" class="text-medium hover:text-purple-700"
+              >About Me</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="text-medium hover:text-purple-700"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#tools" class="text-medium hover:text-purple-700"
+              >Tools and Skill</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="text-medium hover:text-purple-700"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <!-- Download CV Button (Visible on all screens) -->
+        <a
+          href=""
+          class="bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-full px-7 font-semibold transition duration-300 hidden lg:block"
+        >
+          Download CV
+        </a>
+
+        <!-- Mobile Menu (Hidden by default, shown when hamburger is clicked) -->
+        <ul
+          id="mobile-menu"
+          class="lg:hidden hidden flex-col bg-gradient-to-r from-black to-gray-800 text-white absolute top-20 left-0 w-full py-5 px-8 space-y-5 rounded-lg shadow-lg"
+        >
+          <li>
+            <a href="#home" class="text-medium hover:text-purple-700 block"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#aboutMe" class="text-medium hover:text-purple-700 block"
+              >About Me</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="text-medium hover:text-purple-700 block"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#tools" class="text-medium hover:text-purple-700 block"
+              >Tools and Skill</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="text-medium hover:text-purple-700 block"
+              >Contact</a
+            >
+          </li>
+          <a
+            href=""
+            class="bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-full px-7 font-semibold transition duration-300 block w-fit"
+          >
+            Download CV
+          </a>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div id="home" class="max-w-6xl mx-auto text-center mt-20 home">
+      <p
+        class="text-md md:text-2xl text-gray-600 mb-10 flex justify-center items-center gap-2 rounded-full py-1 px-4 w-fit mx-auto bg-white"
+      >
+        <span>📍</span> Indonesia, Pekanbaru City
+      </p>
+
+      <!-- Title Section -->
+      <h2 class="text-3xl md:text-6xl font-bold text-gray-800 tracking-wide">
+        ZAKY FATHUR RAHMAN
+      </h2>
+      <h2
+        class="text-3xl md:text-6xl font-bold text-gray-800 mt-2 tracking-wide"
+      >
+        FULL STACK WEB DEVELOPER
+      </h2>
+      <h2
+        class="text-2xl md:text-5xl mt-2 bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-purple-500"
+      >
+        PADANG STATE POLYTECHNIC STUDENT
+      </h2>
+
+      <!-- Gambar Placeholder -->
+      <div class="flex justify-center mt-10">
+        <img src="assets/hero-section/hero_img.png" alt="" />
+      </div>
+    </div>
+
+    <!-- SKILL -->
+    <div
+      class="flex overflow-hidden bg-black text-white py-5 skill-choice z-10"
+    >
+      <div class="flex animate-scroll whitespace-nowrap items-center">
+        <p class="mx-4">WEB DEVELOPMENT</p>
+        <span class="separator mx-4">★</span>
+        <!-- Bintang separator -->
+        <p class="mx-4">UI/UX DESIGN</p>
+        <span class="separator mx-4">★</span>
+        <!-- Bintang separator -->
+        <p class="mx-4">WEB DEVELOPMENT</p>
+        <span class="separator mx-4">★</span>
+        <!-- Titik separator -->
+        <p class="mx-4">UI/UX DESIGN</p>
+        <span class="separator mx-4">★</span>
+        <!-- Titik separator -->
+        <p class="mx-4">WEB DEVELOPMENT</p>
+        <span class="separator mx-4">★</span>
+        <!-- Bintang separator -->
+        <p class="mx-4">UI/UX DESIGN</p>
+        <span class="separator mx-4">★</span>
+
+        <!-- Duplicate content for seamless scrolling -->
+        <p class="mx-4">WEB DEVELOPMENT</p>
+        <span class="separator mx-4">★</span>
+        <p class="mx-4">UI/UX DESIGN</p>
+        <span class="separator mx-4">★</span>
+        <p class="mx-4">WEB DEVELOPMENT</p>
+        <span class="separator mx-4">★</span>
+        <p class="mx-4">UI/UX DESIGN</p>
+        <span class="separator mx-4">★</span>
+        <p class="mx-4">WEB DEVELOPMENT</p>
+        <span class="separator mx-4">★</span>
+        <p class="mx-4">UI/UX DESIGN</p>
+      </div>
+    </div>
+
+    <!-- 3D Image Carousel Section -->
+    <div id="aboutMe" class="bg-white py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <!-- Text Section -->
+          <div>
+            <h1 class="text-md md:text-lg font-semibold text-gray-500">
+              Introduction
+            </h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              About <span class="text-purple-600">Me</span>
+            </h1>
+            <p class="leading-relaxed mb-6 text-justify font-[Poppins]">
+              I am an aspiring
+              <b class="text-md text-gray-800"> Fullstack Web Developer </b>
+              from Indonesia with a passion for learning and building web
+              projects. I have a basic understanding of programming languages
+              and enjoy working on projects to enhance my skills and gain more
+              experience in
+              <b class="text-md text-gray-800">web development</b>.
+            </p>
+          </div>
+
+          <!-- image -->
+          <!-- 3D Image Carousel Section -->
+          <div class="flex justify-center flex-col items-center">
+            <!-- Owl Carousel Container -->
+            <div class="owl-carousel owl-theme">
+              <!-- Slide 1 -->
+              <div class="item">
+                <img
+                  src="assets/about-section/hero_img1.jpeg"
+                  alt="Image 1"
+                  class="rounded-lg object-cover h-64 sm:h-80 lg:h-full w-full"
+                />
+              </div>
+              <!-- Slide 2 -->
+              <div class="item">
+                <img
+                  src="assets/about-section/hero_img2.jpeg"
+                  alt="Image 2"
+                  class="rounded-lg object-cover h-64 sm:h-80 lg:h-full w-full"
+                />
+              </div>
+              <!-- Slide 3 -->
+              <div class="item">
+                <img
+                  src="assets/about-section/hero_img3.jpeg"
+                  alt="Image 3"
+                  class="rounded-lg object-cover h-64 sm:h-80 lg:h-full w-full"
+                />
+              </div>
+              <!-- Slide 4 -->
+              <div class="item">
+                <img
+                  src="assets/about-section/hero_img4.jpeg"
+                  alt="Image 4"
+                  class="rounded-lg object-cover h-64 sm:h-80 lg:h-full w-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects" class="max-w-6xl mx-auto mt-20 p-5">
+      <div class="max-w-xl mx-auto">
+        <h1
+          class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+        >
+          My <span class="text-purple-600">Projects</span>
+        </h1>
+        <p
+          class="text-md md:text-lg text-center text-gray-700 mb-12 font-[Poppins]"
+        >
+          I have worked on several projects to explore and develop my skills in
+          web development.
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 font-[Poppins]"
+      >
+        <!-- Project Card -->
+        <div
+          class="bg-[#2A2A2A] shadow-md border-2 border-transparent hover:bg-purple-900 transition-all duration-300 text-white rounded-lg shadow-md overflow-hidden"
+        >
+          <!-- Thumbnail -->
+          <img
+            src="assets/project-section/1.bkk.png"
+            alt="Project Thumbnail"
+            class="w-full h-48 object-cover"
+          />
+
+          <!-- Content -->
+          <div class="p-4">
+            <!-- Category and Date -->
+            <div class="flex justify-between items-center mb-2">
+              <p
+                class="text-md font-bold text-green-200 py-1 px-3 rounded-full bg-green-700"
+              >
+                WEBSITE
+              </p>
+              <p class="text-sm text-gray-400">Dec 19, 2024</p>
+            </div>
+
+            <!-- Title -->
+            <p class="text-lg font-bold text-white">
+              Sistem Informasi BKK (Bursa Kerja Khusus)
+            </p>
+
+            <!-- Description -->
+            <p class="text-sm text-gray-400 mt-2 text-justify">
+              Website sistem informasi bursa kerja khusus (BKK) menggunakan PHP
+              Native dan Tailwind CSS. Sistem ini bertujuan untuk memudahkan
+              pengelolaan data bursa kerja khusus (BKK)
+            </p>
+
+            <!-- Tech Tools -->
+            <div class="flex flex-col mt-4">
+              <div>
+                <p class="text-md text-white">Tech Tools:</p>
+              </div>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <!-- Card for HTML -->
+                <div
+                  class="bg-gray-400 rounded-full p-2 w-10 h-10 flex justify-center items-center text-xs"
+                  title="HTML"
+                >
+                  <i class="bx bxl-html5 text-orange-500 text-3xl"></i>
+                </div>
+
+                <!-- Card for CSS -->
+                <div
+                  class="bg-gray-400 rounded-full p-2 w-10 h-10 flex justify-center items-center text-xs"
+                  title="CSS"
+                >
+                  <i class="bx bxl-css3 text-blue-500 text-3xl"></i>
+                </div>
+
+                <!-- Card for Tailwind -->
+                <div
+                  class="bg-gray-400 rounded-full p-2 w-10 h-10 flex justify-center items-center text-xs"
+                  title="Tailwind"
+                >
+                  <i class="bx bxl-tailwind-css text-teal-600 text-3xl"></i>
+                </div>
+
+                <!-- Card for PHP -->
+                <div
+                  class="bg-gray-400 rounded-full p-2 w-10 h-10 flex justify-center items-center text-xs"
+                  title="PHP Native"
+                >
+                  <i class="bx bxl-php text-indigo-500 text-3xl"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tools and skill -->
+    <div id="tools" class="max-w-6xl mx-auto text-center mt-20 p-5">
+      <div class="max-w-xl mx-auto">
+        <h1 class="text-center text-3xl font-bold text-purple-900 mb-4">
+          Tools And Skills
+        </h1>
+        <p class="text-md text-center text-gray-700 mb-12 font[Poppins]">
+          While working on the project I used the following tools
+        </p>
+      </div>
+
+      <!-- Cards container -->
+      <div
+        class="grid grid-cols-4 md:grid-cols-6 gap-4 items-center justify-center font-[Poppins]"
+      >
+        <!-- Card 1: HTML5 -->
+        <div
+          class="group flex flex-col items-center justify-center bg-[#2A2A2A] hover:bg-purple-900 rounded-lg p-3 h-40 w-32 transform transition-all duration-300 hover:rotate-3 hover:scale-105 hover:shadow-lg"
+        >
+          <i
+            class="bx bxl-html5 text-orange-500 text-5xl group-hover:scale-110 transform transition-transform duration-300"
+            title="HTML5"
+          ></i>
+          <p class="text-white mt-3 text-sm">HTML5</p>
+        </div>
+
+        <!-- Card 2: CSS3 -->
+        <div
+          class="group flex flex-col items-center justify-center bg-[#2A2A2A] hover:bg-purple-900 rounded-lg p-3 h-40 w-32 transform transition-all duration-300 hover:rotate-3 hover:scale-105 hover:shadow-lg"
+        >
+          <i
+            class="bx bxl-css3 text-blue-500 text-5xl group-hover:scale-110 transform transition-transform duration-300"
+            title="CSS3"
+          ></i>
+          <p class="text-white mt-3 text-sm">CSS5</p>
+        </div>
+
+        <!-- Card 3: Tailwind CSS -->
+        <div
+          class="group flex flex-col items-center justify-center bg-[#2A2A2A] hover:bg-purple-900 rounded-lg p-3 h-40 w-32 transform transition-all duration-300 hover:rotate-3 hover:scale-105 hover:shadow-lg"
+        >
+          <i
+            class="bx bxl-tailwind-css text-teal-400 text-5xl group-hover:scale-110 transform transition-transform duration-300"
+            title="Tailwind CSS"
+          ></i>
+          <p class="text-white mt-3 text-sm">Tailwind CSS</p>
+        </div>
+
+        <!-- Card 4: Bootstrap -->
+        <div
+          class="group flex flex-col items-center justify-center bg-[#2A2A2A] hover:bg-purple-900 rounded-lg p-3 h-40 w-32 transform transition-all duration-300 hover:rotate-3 hover:scale-105 hover:shadow-lg"
+        >
+          <i
+            class="bx bxl-bootstrap text-purple-500 text-5xl group-hover:scale-110 transform transition-transform duration-300"
+            title="Bootstrap"
+          ></i>
+          <p class="text-white mt-3 text-sm">Bootstrap</p>
+        </div>
+
+        <!-- Card 7: PHP -->
+        <div
+          class="group flex flex-col items-center justify-center bg-[#2A2A2A] hover:bg-purple-900 rounded-lg p-3 h-40 w-32 transform transition-all duration-300 hover:rotate-3 hover:scale-105 hover:shadow-lg"
+        >
+          <i
+            class="bx bxl-php text-indigo-500 text-5xl group-hover:scale-110 transform transition-transform duration-300"
+            title="PHP"
+          ></i>
+          <p class="text-white mt-3 text-sm">PHP</p>
+        </div>
+
+        <!-- Card 5: Visual Studio Code -->
+        <div
+          class="group flex flex-col items-center justify-center bg-[#2A2A2A] hover:bg-purple-900 rounded-lg p-3 h-40 w-32 transform transition-all duration-300 hover:rotate-3 hover:scale-105 hover:shadow-lg"
+        >
+          <i
+            class="bx bxl-visual-studio text-blue-400 text-5xl group-hover:scale-110 transform transition-transform duration-300"
+            title="Visual Studio Code"
+          ></i>
+          <p class="text-white mt-3 text-sm">Visual Studio Code</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-gray-900 py-10 mt-20 overflow-hidden">
+      <div class="max-w-6xl mx-auto grid grid-cols-1">
+        <!-- Left Content (CSS Magic Card) -->
+        <div class="flex justify-center items-center mb-10">
+          <div class="relative">
+            <!-- Lanyard -->
+            <div
+              class="absolute rounded-md top-2 left-1/2 transform -translate-x-1/2 -translate-y-20 w-5 h-20 bg-gradient-to-r from-black via-gray-800 to-black"
+            ></div>
+
+            <!-- Card -->
+            <div
+              class="bg-gradient-to-r from-black via-gray-800 to-black text-white rounded-lg shadow-xl overflow-hidden p-8 relative"
+            >
+              <!-- Top label -->
+              <div class="absolute top-2 left-2 text-xs text-gray-200">
+                Politeknik Negeri Padang
+              </div>
+
+              <!-- Image -->
+              <div class="flex justify-center my-3">
+                <img
+                  src="assets/profile.jpg"
+                  alt="Zakyftrrhmn_"
+                  class="rounded-md border-4 border-gray-800 shadow-md w-32 h-32"
+                />
+              </div>
+
+              <!-- Text Content -->
+              <div class="text-center gap-10">
+                <h1 class="text-xl font-bold">Zaky Fathur Rahman</h1>
+                <p class="text-gray-400">Fullstack Web Developer</p>
+
+                <!-- Social Media Icons (Using SVG) -->
+                <div class="mt-4 flex justify-center space-x-6">
+                  <!-- GitHub -->
+                  <a
+                    href="https://github.com/Zakyftrrhmn"
+                    target="_blank"
+                    class="text-gray-400 hover:text-white"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.173c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.083-.729.083-.729 1.205.084 1.838 1.24 1.838 1.24 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.763-1.605-2.665-.305-5.466-1.332-5.466-5.931 0-1.31.467-2.381 1.236-3.221-.124-.303-.535-1.527.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.649.242 2.873.118 3.176.77.84 1.234 1.911 1.234 3.221 0 4.61-2.805 5.624-5.475 5.921.43.372.824 1.102.824 2.222v3.293c0 .319.218.694.825.576 4.765-1.589 8.199-6.084 8.199-11.383 0-6.627-5.373-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                  <!-- LinkedIn -->
+                  <a
+                    href="https://www.linkedin.com/in/zaky-fathur-rahman-777709253/"
+                    target="_blank"
+                    class="text-gray-400 hover:text-white"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11.5 19h-2.5v-11h2.5v11zm-1.25-12.268c-.82 0-1.481-.66-1.481-1.482 0-.818.661-1.482 1.481-1.482.822 0 1.481.664 1.481 1.482 0 .822-.659 1.482-1.481 1.482zm12.25 12.268h-2.5v-5.604c0-1.338-.029-3.063-1.868-3.063-1.869 0-2.156 1.46-2.156 2.968v5.699h-2.5v-11h2.404v1.505h.034c.335-.635 1.155-1.302 2.38-1.302 2.547 0 3.015 1.676 3.015 3.855v6.942z"
+                      />
+                    </svg>
+                  </a>
+                  <!-- Instagram -->
+                  <a
+                    href="https://www.instagram.com/zfr.design/"
+                    target="_blank"
+                    class="text-gray-400 hover:text-white"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.333 3.608 1.308.975.975 1.246 2.241 1.308 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.333 2.633-1.308 3.608-.975.975-2.241 1.246-3.608 1.308-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.333-3.608-1.308-.975-.975-1.246-2.241-1.308-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.333-2.633 1.308-3.608.975-.975 2.241-1.246 3.608-1.308 1.265-.058 1.645-.07 4.849-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.417.065-2.675.343-3.708 1.377-1.033 1.033-1.311 2.291-1.376 3.708-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.065 1.417.343 2.675 1.376 3.708 1.033 1.033 2.291 1.311 3.708 1.376 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.417-.065 2.675-.343 3.708-1.376 1.033-1.033 1.311-2.291 1.376-3.708.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.065-1.417-.343-2.675-1.376-3.708-1.033-1.033-2.291-1.311-3.708-1.376-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.438-.642-1.438-1.438s.642-1.438 1.438-1.438 1.438.642 1.438 1.438-.642 1.438-1.438 1.438z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Hamburger menu toggle
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            1000: {
+              items: 3,
+            },
+          },
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          smartSpeed: 800, // Smooth transition speed
+        });
+      });
+    </script>
+  </body>
+</html>
